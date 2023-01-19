@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | Aure Luce</title>
+    <!-- feuile de style --> 
+    <link rel="stylesheet" href="../style.css">
+    <!-- polices google font --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="about.html">Intro</a></li>
+            <li><a href="works.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+    <section id="travaux">
+        <div class="img_wrap">
+            <img class="image" src="../media/grille-typo.png" />
+            <div class="img_description"><h2>Projet grille et typographie</h2>Visuel réalisé pour le cours grille et typo, le but était de réaliser une composition à partir d'une police choisie et en gardant en tête le concept de grille. J'ai choisi la police Akira Expanded.</div>
+        </div>
+        <div class="img_wrap">
+            <img class="image" src="../media/afterworld.png" />
+            <div class="img_description"><h2>Afterworld</h2>Projet en duo pour le cours de culture graphique. Réalisation d'un moodboard basé sur un produit fictif imaginé librement en groupe à partir d'un kickstarter (chaussures VR captant les mouvements). Nous avons imaginé un jeu vidéo de combat se passant dans un monde dystopique cyberpunk. Choix de couleurs, police, imagination d'un logo.</div>
+        </div>
+        <div class="img_wrap">
+            <img class="image" src="../media/autonomy.png" />
+            <div class="img_description"><h2>Autonomy Paris</h2>Brief de candidature pour une alternance chez Autonomy Paris. Au choix entre deux sujets, le but était de réaliser entre 3 et 5 visuels type slider pour les réseaux sociaux. Il fallait présenter l'événement des Mobility Awards et donner envie de participer. Charte graphique donnée.</div>
+        </div>
+        <div class="img_wrap">
+            <img class="image" src="../media/anitalk.png" />
+            <div class="img_description"><h2>Anitalk</h2>Projet de cours d'UX/UI, adaptation d'une application déjà existante à un public spécifique : ici Google Traduction pour les animaux. Réalisation d'une charte graphique, d'un design system, wireframes et maquette fonctionnelle. Présentation orale sur le mode jeu de rôle questions réponses client.</div>
+        </div>
+        <br>
+        <div class="img_wrap">
+            <img class="image" src="../media/ecoweb.png" />
+            <div class="img_description"><h2>Ecoweb</h2>Projet de fin d'études, application d'apprentissage en ligne autour du développement éco-responsable permettant de publier et consulter des cours et disposant d'une interface d'administration. Gestion de compte, des formations et des cours, réalisation d'une charte graphique et de personas, diagrammes de classe et cas d'utilisation, production de livrables (manuel, etc). Présenté à l'oral pour l'obtention de mon titre développeur web et web mobile.</div>
+        </div>
+        <div class="img_wrap">
+            <img class="image" src="../media/sakura.png" />
+            <div class="img_description"><h2>Agence Sakura</h2>Projet de site Wordpress pour une agence de voyages fictive. Gestion de voyages, réservations, blog. Utilisation d'un plugin de traduction et d'Elementor free.</div>
+        </div>
+        <div class="img_wrap">
+            <img class="image" src="../media/teamarket.png" />
+            <div class="img_description"><h2>Tea market</h2>Projet de site ecommerce de vente de thé avec Symfony et une interface EasyAdmin. Gestion de compte utilisateur, adresses postales, panier, paiement avec Stripe.</div>
+        </div>
+        <div class="img_wrap">
+            <img class="image" src="../media/valorem.png" />
+            <div class="img_description"><h2>Valorem Investissements</h2>Mise à jour, actualisation et maintenance du site de gestion de patrimoine de Valorem Investissements pendant mon alternance chez eux. Wordpress avec Divi builder.</div>
+        </div>
+    </section>
+
+     <!-- librairies particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- scripts--> 
+    <script>
+        const nav = document.querySelector("nav");
+        const navLinks = document.querySelectorAll("nav a");
+          
+          function createUnderline() {
+              const underline = document.createElement("div");
+              underline.classList.add("nav-underline");
+              nav.appendChild(underline);
+              underline.style.width = navLinks[0].offsetWidth + "px";
+              navLinks[0].classList.add("active");
+              return underline;
+          }
+          createUnderline();
+          
+          navLinks.forEach((link) => {
+              link.addEventListener("mouseenter", () => {
+                  navLinks.forEach((link) => {
+                      link.classList.remove("active");
+                  });
+                  link.classList.add("active");
+                  const underline = document.querySelector(".nav-underline");
+                  underline.style.width = link.offsetWidth + "px";
+                  underline.style.left = link.offsetLeft + "px";
+              });
+          });
+        </script>
+       <script src="../particles.js"></script>
+  </body>
+  </html>

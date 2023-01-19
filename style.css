@@ -1,0 +1,191 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #181d31;
+}
+
+/* ---- particles.js container ---- */ 
+#particles-js{ 
+    position:absolute; 
+    width: 100%; 
+    height: 100%; 
+    background-color: #181d31;
+}
+/* ---- navigation ---- */ 
+nav {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: -20vh;
+}   
+
+nav a {
+    color: #F0E9D2;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-underline {
+    position: absolute;
+    height: 2px;
+    background: #F0E9D2;
+    left: 0;
+    bottom: -2px;
+    scale: 1.05;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a.active {
+    transition: all 0.3s ease-in-out;
+}
+
+li {
+    list-style: none;
+    display:inline;
+}
+
+/* ---- accueil ---- */ 
+
+section {
+    position: inherit;
+    margin: auto;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+h1 {
+    color: #F0E9D2;
+    font-size: 100px;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+h2 {
+    color: #E6DDC4;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: -15px;
+}
+
+.icone {
+    position: relative;
+    margin-top: -15px;
+    width: 50px;
+}
+
+/* ---- page about ---- */ 
+.conteneur h1 {
+    color: #181d31;
+    text-shadow: 1px 4px #F0E9D2;
+    font-size: 80px;
+    margin-top: -80px
+}
+.conteneur {
+    position: relative;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    background-color: #F0E9D2;
+    color: #181d31;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    border-radius: 60px 5px;
+}
+
+/* ---- page projets ---- */ 
+
+.image {
+    width: 350px;
+    height: 350px;
+}
+
+.img_wrap {
+    position: relative;
+    float: left;
+    height: 350px;
+    width: 350px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+  
+.img_description {
+    position: absolute;
+    text-align: left;
+    padding: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(24, 29, 49, 0.6);
+    color: #F0E9D2;
+    font-family: 'Playfair Display', serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.img_description h2 {
+    margin: 0;
+}
+  
+.img_wrap:hover .img_description {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ---- page contact ---- */ 
+
+a {
+    color: #181d31;
+}
+
+/* ---- fluidité ---- */ 
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    .conteneur h1 {
+        font-size: 60px;
+    }
+    nav a {
+        font-size: 15px;
+    }
+    .conteneur {
+        width: 80%;
+    }
+    #travaux {
+        margin-top: 12vh;
+    }
+    .image {
+        width: 250px;
+        height: 250px;
+    }
+    .img_wrap {
+        height: 250px;
+        width: 250px;
+        margin-left: 18%;
+    }
+    .img_wrap:hover .img_description {
+        visibility: hidden; /* je cache les descriptions sur la version mobile pour éviter le hover peu ergonomique*/
+    }
+}
